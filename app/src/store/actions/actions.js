@@ -1,13 +1,13 @@
 import axios from "axios";
 
-export const fetchQuote = () => {
+export const fetchJackson = () => {
   return dispatch => {
-    dispatch({ type: "FETCH_QUOTE_START" });
+    dispatch({ type: "FETCH_DATA_START" });
     axios
-      .get("https://rickandmortyapi.com/api/character/")
+      .get("https://rickandmortyapi.com/api/character/404")
       .then(res => {
-        // res.data.quote
-        dispatch({ type: "FETCH_QUOTE_SUCCESS", payload: res.data.quote });
+        console.log(res)
+        dispatch({ type: "FETCH_DATA_SUCCESS", payload: res.data });
       })
       .catch(err => console.log(err.response));
   };

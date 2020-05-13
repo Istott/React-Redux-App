@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { quotesReducer as quotes } from "./rickReducer";
+import { jacksonReducer as jackson } from "./rickReducer";
 
 export default combineReducers({
-  quotes
+  jackson
 });
